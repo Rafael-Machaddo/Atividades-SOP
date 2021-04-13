@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+   // Variaveis
+   int num, i;
+   float *notas, soma;
+  // Recebe a quantidade de alunos
+   printf("Informe a quantidade de alunos: ");
+   scanf("%d", &num);
+
+   // Aloca o vetor
+   notas = (float *) malloc(sizeof(float) * num+1);  
+
+   // Lê as notas
+   for(i=0; i<num; i++){
+       printf("Informe a nota do aluno [%d]: ", i+1);
+       scanf("%f", &notas[i]);
+   }
+
+   // Calcula a soma
+   soma = 0;
+   for(i=0; i<num; i++){
+       soma = soma + notas[i];
+   }
+
+   // Librera a memória do vetor
+   free(notas);   
+
+   // Mostra a media
+   printf("A média desses alunos é %.2f!\n", soma / num);
+
+
+  // Recebe a quantidade de alunos
+   printf("Informe a quantidade de alunos da segunda turma: ");
+   scanf("%d", &num);
+
+   // Aloca o vetor
+   notas = (float *) malloc(sizeof(float) * num+1);  
+
+   // Lê as notas
+   for(i=0; i<num; i++){
+       printf("Informe a nota do aluno [%d]: ", i+1);
+       scanf("%f", &notas[i]);
+   }
+
+   // Calcula a soma
+   soma = 0;
+   for(i=0; i<num; i++){
+       soma = soma + notas[i];
+   }
+
+   // Librera a memória do vetor
+   free(notas);   
+
+   // Mostra a media
+   printf("A média desses alunos é %.2f!\n", soma / num);
+   
+   return 0;
+}
